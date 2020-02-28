@@ -1,0 +1,109 @@
+#haut {
+    display: flex;
+    height: 40vh;
+    padding: 2px;
+}
+
+#listeScene {
+    flex: 1 1;
+    background-color: red;
+}
+
+#listeBouton {
+    display: flex;
+    flex-flow: row wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    justify-content: space-between;
+    padding: 1vh;
+    width: 60vh;
+    height: 30vh;
+}
+
+#creationSequence {
+    flex: 1 1;
+    background-color: blue;
+}
+
+.btn {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    padding: 2vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
+}
+
+#listeAction {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+#zoneSequence {
+    display: flex;
+}
+
+#boutonSequence {
+    display: inline-grid;
+    width: 15%;
+}
+
+#connexion {
+    flex: 1 1;
+    background-color: green;
+}
+
+#bas {
+    display: flex;
+    height: 60vh;
+    padding: 2px;
+}
+
+.reglage {
+    text-align: center;
+    background-color: yellow;
+}
+
+.imageReglage {
+    width: 5vh;
+    height: 5vh;
+}
+
+.imageReglage img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 2.5vh;
+}
+
+.sliderConteneur {
+    width: 10vh;
+    height: 40vh;
+    background-image: url(image/Potar.svg);
+    background-repeat: round;
+    background-size: cover;
+}
+
+.slider {
+    margin-top: 19vh;
+    margin-left: -14vh;
+    -webkit-appearance: none;
+    width: 38vh;
+    height: 2vh;
+    background: #d3d3d3;
+    outline: none;
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 6vh;
+    height: 2vh;
+    border: 0;
+    background: url(image/boutonPotar.png);
+    background-size: cover;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }

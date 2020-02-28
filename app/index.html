@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <title>LightShow Project</title>
+</head>
+
+<body>
+  <div id="haut">
+    <div id="listeScene">
+      Scènes
+      <div id="listeBouton">
+        <button type="button" class="btn btn-primary btn-lg">Test 1</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 2</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 3</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 4</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 5</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 6</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 7</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 8</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 9</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 10</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 11</button>
+        <button type="button" class="btn btn-primary btn-lg">Test 12</button>
+        <button type="button" class="btn btn-primary btn-lg">Test de texte très long</button>
+      </div>
+      <button type="button" class="btn btn-danger">Effacer</button>
+    </div>
+    <div id="creationSequence">
+      Titre :
+      <textarea></textarea>
+      <button>Creer</button>
+      <div id="zoneSequence">
+        <select size="10" id="listeAction">
+          <option>Action1</option>
+          <option>Action2</option>
+          <option>Action3</option>
+        </select>
+        <div id="boutonSequence">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
+    </div>
+    <div id="connexion">
+      Choix usb :
+      <select>
+        <option>USB1</option>
+        <option>USB2</option>
+        <option>USB3</option>
+      </select>
+    </div>
+  </div>
+  <div id="bas">
+    <div class="reglage">
+      <div class="numReglage">
+        <label>1</label>
+      </div>
+      <div class="nomReglage">
+        <label>reglage1</label>
+      </div>
+      <div class="imageReglage">
+        <img src="image/couleur.jpeg">
+      </div>
+      <div class="valeurReglage">
+        <label>120</label>
+      </div>
+      <div class="sliderConteneur">
+        <input class="slider" type="range" min="0" max="255" value="0" step="1">
+      </div>
+    </div>
+
+    <div class="reglage">
+      <div class="numReglage">
+        <label>2</label>
+      </div>
+      <div class="nomReglage">
+        <label>reglage2</label>
+      </div>
+      <div class="imageReglage">
+        <img src="image/couleur.jpeg">
+      </div>
+      <div class="valeurReglage">
+        <label>120</label>
+      </div>
+      <div class="sliderConteneur">
+        <input class="slider" type="range" min="0" max="255" value="0" step="1">
+      </div>
+    </div>
+
+    <div class="reglage">
+      <div class="numReglage">
+        <label>3</label>
+      </div>
+      <div class="nomReglage">
+        <label>reglage3</label>
+      </div>
+      <div class="imageReglage">
+        <img src="image/couleur.jpeg">
+      </div>
+      <div class="valeurReglage">
+        <label>120</label>
+      </div>
+      <div class="sliderConteneur">
+        <input class="slider" type="range" min="0" max="255" value="0" step="1">
+      </div>
+    </div>
+
+
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
