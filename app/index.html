@@ -31,12 +31,14 @@
         <button type="button" class="btn btn-primary btn-lg">Test 12</button>
         <button type="button" class="btn btn-primary btn-lg">Test de texte très long</button>
       </div>
-      <button type="button" class="btn btn-danger">Effacer</button>
+        <button type="button" id="btnEffacer" class="btn btn-danger">Effacer</button>
     </div>
     <div id="creationSequence">
-      Titre :
-      <textarea></textarea>
-      <button>Creer</button>
+      <div id="titreSequence">
+        Titre :
+        <input id="titre">
+        <button>Créer</button>
+      </div>
       <div id="zoneSequence">
         <select size="10" id="listeAction">
           <option>Action1</option>
@@ -50,12 +52,12 @@
       </div>
     </div>
     <div id="connexion">
-      Choix usb :
-      <select>
-        <option>USB1</option>
-        <option>USB2</option>
-        <option>USB3</option>
-      </select>
+        Choix USB : 
+        <select id="listeConnexion">
+          <option>USB1</option>
+          <option>USB2</option>
+          <option>USB3</option>
+        </select>
     </div>
   </div>
   <div id="bas">
