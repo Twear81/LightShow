@@ -17,6 +17,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.0.1"
+    "electron": "^8.2.0"
+  },
+  "dependencies": {
+    "rangeslider.js": "^2.3.3"
   }
 }
