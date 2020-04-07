@@ -8,7 +8,7 @@
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  
   
   <title>LightShow Project</title>
 </head>
@@ -73,10 +73,10 @@
         <img src="image/couleur.jpeg">
       </div>
       <div class="valeurReglage">
-        <label id="valeurReglage1">120</label>
+        <span id="valeurReglage1">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider1" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider1" type="range" min="0" max="255" value="0" step="1"/>
       </div>
     </div>
 
@@ -91,7 +91,7 @@
         <img src="image/couleur.jpeg">
       </div>
       <div class="valeurReglage" >
-        <label id="valeurReglage2">120</label>
+        <span id="valeurReglage2">0</span>
       </div>
       <div class="sliderConteneur">
         <input class="slider" id="slider2" type="range" min="0" max="255" value="0" step="1">
@@ -109,7 +109,7 @@
         <img src="image/couleur.jpeg">
       </div>
       <div class="valeurReglage" >
-        <label id="valeurReglage3">120</label>
+        <span id="valeurReglage3">0</span>
       </div>
       <div class="sliderConteneur">
         <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
@@ -119,6 +119,7 @@
 
   </div>
   <script src="./renderer.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
