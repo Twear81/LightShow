@@ -8,8 +8,7 @@
   <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-  
-  
+
   <title>LightShow Project</title>
 </head>
 
@@ -32,33 +31,30 @@
         <button type="button" class="btn btn-primary btn-lg">Test 12</button>
         <button type="button" class="btn btn-primary btn-lg">Test de texte très long</button>
       </div>
-        <button type="button" id="btnEffacer" class="btn btn-danger">Effacer</button>
+      <button type="button" id="btnEffacer" class="btn btn-danger">Effacer</button>
     </div>
     <div id="creationSequence">
       <div id="titreSequence">
         Titre :
         <input id="titre">
-        <button>Créer</button>
+        <button id="creerSequence">Créer</button>
       </div>
       <div id="zoneSequence">
         <select size="10" id="listeAction">
-          <option>Action1</option>
-          <option>Action2</option>
-          <option>Action3</option>
         </select>
         <div id="boutonSequence">
-          <button>+</button>
-          <button>-</button>
+          <button id="ajouterAction">+</button>
+          <button id="supprimerAction">-</button>
         </div>
       </div>
     </div>
     <div id="connexion">
-        Choix USB : 
-        <select id="listeConnexion">
-          <option>USB1</option>
-          <option>USB2</option>
-          <option>USB3</option>
-        </select>
+      Choix USB :
+      <select id="listeConnexion">
+        <option>USB1</option>
+        <option>USB2</option>
+        <option>USB3</option>
+      </select>
     </div>
   </div>
   <div id="bas">
@@ -76,7 +72,7 @@
         <span id="valeurReglage1">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider1" type="range" min="0" max="255" value="0" step="1"/>
+        <input class="slider" id="slider1" type="range" min="0" max="255" value="0" step="1" />
       </div>
     </div>
 
@@ -90,7 +86,7 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage2">0</span>
       </div>
       <div class="sliderConteneur">
@@ -108,15 +104,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage3">0</span>
       </div>
       <div class="sliderConteneur">
         <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
       </div>
-     </div> 
-    
-      <div class="reglage" id="reglage4">
+    </div>
+
+    <div class="reglage" id="reglage4">
       <div class="numReglage">
         <label>4</label>
       </div>
@@ -126,15 +122,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage4">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider4" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage5">
+
+    <div class="reglage" id="reglage5">
       <div class="numReglage">
         <label>5</label>
       </div>
@@ -144,15 +140,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage5">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider5" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-       <div class="reglage" id="reglage6">
+
+    <div class="reglage" id="reglage6">
       <div class="numReglage">
         <label>6</label>
       </div>
@@ -162,15 +158,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage6">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider6" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage7">
+
+    <div class="reglage" id="reglage7">
       <div class="numReglage">
         <label>7</label>
       </div>
@@ -180,15 +176,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage7">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider7" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
 
-      <div class="reglage" id="reglage8">
+    <div class="reglage" id="reglage8">
       <div class="numReglage">
         <label>8</label>
       </div>
@@ -198,15 +194,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage8">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider8" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage9">
+
+    <div class="reglage" id="reglage9">
       <div class="numReglage">
         <label>9</label>
       </div>
@@ -216,15 +212,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage9">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider9" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage10">
+
+    <div class="reglage" id="reglage10">
       <div class="numReglage">
         <label>10</label>
       </div>
@@ -234,15 +230,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage10">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider10" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
 
-      <div class="reglage" id="reglage11">
+    <div class="reglage" id="reglage11">
       <div class="numReglage">
         <label>11</label>
       </div>
@@ -252,15 +248,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage11">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider11" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage12">
+
+    <div class="reglage" id="reglage12">
       <div class="numReglage">
         <label>12</label>
       </div>
@@ -270,15 +266,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage12">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider12" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage13">
+
+    <div class="reglage" id="reglage13">
       <div class="numReglage">
         <label>13</label>
       </div>
@@ -288,15 +284,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage13">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider13" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage14">
+
+    <div class="reglage" id="reglage14">
       <div class="numReglage">
         <label>14</label>
       </div>
@@ -306,15 +302,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage14">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider14" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage15">
+
+    <div class="reglage" id="reglage15">
       <div class="numReglage">
         <label>15</label>
       </div>
@@ -324,15 +320,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage15">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider15" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage16">
+
+    <div class="reglage" id="reglage16">
       <div class="numReglage">
         <label>16</label>
       </div>
@@ -342,15 +338,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage16">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider16" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage17">
+
+    <div class="reglage" id="reglage17">
       <div class="numReglage">
         <label>17</label>
       </div>
@@ -360,15 +356,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage17">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider17" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage18">
+
+    <div class="reglage" id="reglage18">
       <div class="numReglage">
         <label>18</label>
       </div>
@@ -378,15 +374,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage18">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider18" type="range" min="0" max="255" value="0" step="1">
       </div>
     </div>
-      
-      <div class="reglage" id="reglage19">
+
+    <div class="reglage" id="reglage19">
       <div class="numReglage">
         <label>19</label>
       </div>
@@ -396,33 +392,15 @@
       <div class="imageReglage">
         <img src="image/couleur.jpeg">
       </div>
-      <div class="valeurReglage" >
+      <div class="valeurReglage">
         <span id="valeurReglage19">0</span>
       </div>
       <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
+        <input class="slider" id="slider19" type="range" min="0" max="255" value="0" step="1">
       </div>
-    </div>
-      <div class="reglage" id="reglage20">
-      <div class="numReglage">
-        <label>20</label>
-      </div>
-      <div class="nomReglage">
-        <label>reglage20</label>
-      </div>
-      <div class="imageReglage">
-        <img src="image/couleur.jpeg">
-      </div>
-      <div class="valeurReglage" >
-        <span id="valeurReglage20">0</span>
-      </div>
-      <div class="sliderConteneur">
-        <input class="slider" id="slider3" type="range" min="0" max="255" value="0" step="1">
-      </div>
-    </div>
-      
     </div>
 
+  </div>
   <script src="./renderer.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>

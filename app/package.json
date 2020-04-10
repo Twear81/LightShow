@@ -1,18 +1,14 @@
 {
-  "name": "electron-quick-start",
+  "name": "LightShow",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Projet Tutore",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/Twear81/LightShow",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "LightShow"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
@@ -21,6 +17,7 @@
   },
   "dependencies": {
     "bootstrap-slider": "^10.6.2",
-    "rangeslider.js": "^2.3.3"
+    "electron-json-storage": "^4.1.8",
+    "jquery": "^3.4.1"
   }
 }

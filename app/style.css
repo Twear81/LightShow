@@ -1,5 +1,6 @@
 body {
     background-color: #a8a7a7;
+    overflow-x: hidden;
 }
 
 #haut {
