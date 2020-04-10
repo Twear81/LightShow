@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #a8a7a7;
 }
 
 #haut {
@@ -10,7 +10,12 @@ body {
 
 #listeScene {
     flex: 1 1;
-    background-color: red;
+    background-image: url(image/maxresdefault.jpg);
+    background-repeat: round;
+    background-size: cover;
+    color: white;
+    font-size: large;
+    font-weight: 500;
     padding: 1vh;
 }
 
@@ -27,11 +32,21 @@ body {
 
 #btnEffacer { 
     margin-right: 1vh;
+    margin-left: 1vh;
+    background-color: #a8a7a7;
+    font-weight: 500;
+    border-color: #a8a7a7;
+
 }
 
 #creationSequence {
     flex: 1 1;
-    background-color: blue;
+    background-image: url(image/maxresdefault.jpg);
+    background-repeat: round;
+    background-size: cover;
+    color: white;
+    font-size: large;
+    font-weight: 500;
     padding: 1vh;
 }
 
@@ -70,7 +85,12 @@ body {
 
 #connexion {
     flex: 1 1;
-    background-color: green;
+    background-image: url(image/maxresdefault.jpg);
+    background-repeat: round;
+    background-size: cover;
+    color: white;
+    font-size: large;
+    font-weight: 500;
     padding: 1vh;
     display: flex;
     justify-content: center;
@@ -83,13 +103,14 @@ body {
 
 #bas {
     display: flex;
+    flex-direction: row;
     height: 60vh;
     padding: 2px;
 }
 
 .reglage {
     text-align: center;
-    background-color: yellow;
+    background-color: #a8a7a7;
 }
 
 .imageReglage {
