@@ -84,6 +84,13 @@ body {
     text-align: center;
 }
 
+#btnAjouter {
+    margin-right: 1vh;
+    margin-left: 1vh;
+    background-color: #a8a7a7;
+    font-weight: 500;
+    border-color: #a8a7a7;
+}
 #connexion {
     flex: 1 1;
     background-image: url(image/maxresdefault.jpg);
@@ -94,6 +101,7 @@ body {
     font-weight: 500;
     padding: 1vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
