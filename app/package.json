@@ -18,6 +18,6 @@
   "dependencies": {
     "bootstrap-slider": "^10.6.2",
     "electron-json-storage": "^4.1.8",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
