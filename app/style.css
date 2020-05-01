@@ -28,16 +28,18 @@ body {
     justify-content: space-between;
     padding: 1vh;
     width: 60vh;
-    height: 25vh;
+    height: 27vh;
 }
 
-#btnEffacer { 
+.disabled {
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+#btnEffacer {
     margin-right: 1vh;
     margin-left: 1vh;
-    background-color: #a8a7a7;
     font-weight: 500;
-    border-color: #a8a7a7;
-
 }
 
 #creationSequence {
@@ -91,6 +93,7 @@ body {
     font-weight: 500;
     border-color: #a8a7a7;
 }
+
 #connexion {
     flex: 1 1;
     background-image: url(image/maxresdefault.jpg);
@@ -163,4 +166,4 @@ body {
     transform-origin: center;
     transform: rotate(-90deg);
     cursor: pointer;
-  }
+}
