@@ -6,7 +6,7 @@ var portSelected = "";
 const os = require('os');
 
 const SerialPort = require('serialport');
-var port = undefined;
+
 const Store = require('electron-store');
 const store = new Store();
 
@@ -98,7 +98,6 @@ function btnInactive() {
 
 function loadAction(idBtn) {
     $('#listeAction').empty();
-    console.log(store.get(idBtn));
     var listeAction = store.get(idBtn);
 
     if (listeAction != undefined) {
@@ -177,16 +176,14 @@ $('#btn9').on("click", function () {
 $("#listeAction").on('change', function () {
     idSelected = $(this).val();
     var listeAction = store.get(nomBtn + "." + idSelected);
-    console.log(nomBtn + "." + idSelected);
-    console.log(idSelected);
     for (i = 0; i < Object.keys(listeAction).length; i++) {
         var idSlider = "#slider" + (i + 1);
         var valeur = parseInt(listeAction[Object.keys(listeAction)[i]]);
         reglage[i] = valeur;
         $(idSlider).val(valeur);
         $(idSlider).trigger('change');
-
     }
+	$("#titreAction").val(idSelected);
 });
 
 $('#ajouterAction').on("click", function () {
@@ -242,15 +239,33 @@ $('#btnEffacer').on("click", function () {
     }	
 });
 
+$('#btnStop').on("click", function () {
+	if (confirm("Voulez vous arrêter l'animation en cours ?")) {
+        var format = "[false,0,0,0,0]";
+		play(format);
+		alert("Animation arrêtée!");
+        } else {}        
+});
+
 $('#jouerAction').on("click", function () {
-    play(reglage);
+	var format = "[["
+	var strobe = false;
+	for (i = 0; i < 5; i++) {
+		if (i == 0 && reglage[i] == "1"){
+			strobe = true;
+			format = format + strobe + ",";
+		}else if (i == 4){
+			format = format + reglage[i] + "]]";
+		}else{
+			format = format + reglage[i] + ",";
+		}
+    }
+    play(format);
 });
 
 $('#jouerScene').on("click", function () {
     var listeAction = store.get(nomBtn);
 
-
-	
     if (listeAction != undefined) {
 		var strobe = false;
 		var format = "[["
@@ -279,27 +294,18 @@ $('#jouerScene').on("click", function () {
     } else {
         alert("La scène que vous essayez de jouer est vide.");
     }
-	console.log(format);
-	play(reglage);
+	play(format);
 });
 
 function play(message) {
-
-	port.write(message, function(err) {
-	if (err) {
-		return console.log('Error on write: ', err.message)
-	}
-	console.log(message);
-	})
-	
+	port.write(message);    
 };
 
 $("#listeConnexion").change(function(){
         portSelected = $(this).val();
-		console.log(portSelected);
-
-		port = new SerialPort(portSelected);
+		port = new SerialPort(portSelected, {baudRate : 9600});
 });
+
 
 SerialPort.list().then(
   ports => ports.forEach(function(ports){
