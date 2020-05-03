@@ -6,6 +6,7 @@ var portSelected = "";
 const os = require('os');
 
 const SerialPort = require('serialport');
+var port = undefined;
 const Store = require('electron-store');
 const store = new Store();
 
@@ -248,44 +249,56 @@ $('#jouerAction').on("click", function () {
 $('#jouerScene').on("click", function () {
     var listeAction = store.get(nomBtn);
 
+
+	
     if (listeAction != undefined) {
-        for (i = 0; i < Object.keys(listeAction).length; i++) {
-            var action = store.get(nomBtn + "." + Object.keys(listeAction)[i]);
-            for (i = 0; i < Object.keys(action).length; i++) {
-                var idSlider = "#slider" + (i + 1);
+		var strobe = false;
+		var format = "[["
+        for (j = 0; j < Object.keys(listeAction).length; j++) {
+            var action = store.get(nomBtn + "." + Object.keys(listeAction)[j]);
+            for (i = 0; i < 5; i++) {
                 var valeur = parseInt(action[Object.keys(action)[i]]);
                 reglage[i] = valeur;
-                $(idSlider).val(valeur);
-                $(idSlider).trigger('change');
-
+				
+				if (i == 0 && reglage[i] == "1"){
+					strobe = true;
+					format = format + strobe + ",";
+				}else if (i == 4){
+					format = format + reglage[i] + "]";
+				}else{
+					format = format + reglage[i] + ",";
+				}
             }
-            play(reglage);
+			if (j == (Object.keys(listeAction).length - 1)){
+				format = format + "]"
+			}else{
+				format = format + ",["
+			}
+            strobe = false;
         }
     } else {
         alert("La scène que vous essayez de jouer est vide.");
     }
+	console.log(format);
+	play(reglage);
 });
 
-function play(tableauReaglage) {
-    //Le tableau est un array
-	
-	const port = new SerialPort(portSelected);
-	//Formatage
-	var strobe = false;
-	if (tableauReaglage[0] == "1"){
-		strobe = true;
+function play(message) {
+
+	port.write(message, function(err) {
+	if (err) {
+		return console.log('Error on write: ', err.message)
 	}
-	var format = "[[" + strobe + "," + tableauReaglage[1] + "," + tableauReaglage[2] + "," + tableauReaglage[3] + "," + tableauReaglage[4] + "]]";
-	console.log(format);
+	console.log(message);
+	})
 	
-	
-	port.write(format);
-	port.close();
 };
 
 $("#listeConnexion").change(function(){
         portSelected = $(this).val();
 		console.log(portSelected);
+
+		port = new SerialPort(portSelected);
 });
 
 SerialPort.list().then(
