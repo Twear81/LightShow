@@ -1,9 +1,11 @@
 var reglage = ["0", "0", "0", "0", "100", "0", "0", "0", "0", "0", "0", "0"];
 var nomBtn = "";
 var idSelected = "";
+var portSelected = "";
 
 const os = require('os');
 
+const SerialPort = require('serialport');
 const Store = require('electron-store');
 const store = new Store();
 
@@ -206,7 +208,7 @@ $('#ajouterAction').on("click", function () {
 
                   }
             } else {
-                for (i = 0; i < 19; i++) {
+                for (i = 0; i < 12; i++) {
                     store.set(cheminJSON + "reglage" + (i + 1), reglage[i]);
                 }
                 $('#listeAction').append(new Option(nomAction, nomAction));
@@ -229,12 +231,14 @@ $('#supprimerAction').on("click", function () {
 
 $('#btnEffacer').on("click", function () {
     if (nomBtn == "") {
-        alert("Selectionnez une scène à reset.");
+        alert("Selectionnez une scène à effacer.");
     } else {
-        store.delete(nomBtn);
-        $('#listeAction').empty();
-        alert("Scène effacée !");
-    }
+		if (confirm('Voulez vous vraiment supprimer cette scène ?')) {
+            store.delete(nomBtn);
+			$('#listeAction').empty();
+			alert("Scène effacée !");
+            } else {}        
+    }	
 });
 
 $('#jouerAction').on("click", function () {
@@ -264,5 +268,35 @@ $('#jouerScene').on("click", function () {
 
 function play(tableauReaglage) {
     //Le tableau est un array
-    //TODO
+	
+	const port = new SerialPort(portSelected);
+	//Formatage
+	var strobe = false;
+	if (tableauReaglage[0] == "1"){
+		strobe = true;
+	}
+	var format = "[[" + strobe + "," + tableauReaglage[1] + "," + tableauReaglage[2] + "," + tableauReaglage[3] + "," + tableauReaglage[4] + "]]";
+	console.log(format);
+	
+	
+	port.write(format);
+	port.close();
 };
+
+$("#listeConnexion").change(function(){
+        portSelected = $(this).val();
+		console.log(portSelected);
+});
+
+SerialPort.list().then(
+  ports => ports.forEach(function(ports){
+	  if (ports.manufacturer != undefined){
+		    $('#listeConnexion').append(new Option(ports.path + " | " + ports.manufacturer, ports.path));
+			$('#listeConnexion').trigger('change');
+	  }else{
+		    $('#listeConnexion').append(new Option(ports.path, ports.path));
+			$('#listeConnexion').trigger('change');
+	  }
+}),
+  err => console.error(err)
+)
