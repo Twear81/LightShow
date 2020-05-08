@@ -4,7 +4,6 @@ var idSelected = "";
 var portSelected = "";
 
 const os = require('os');
-
 const SerialPort = require('serialport');
 
 const Store = require('electron-store');
@@ -114,6 +113,7 @@ $('#btn1').on("click", function () {
     btnInactive();
     $('#btn1').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -121,6 +121,7 @@ $('#btn2').on("click", function () {
     btnInactive();
     $('#btn2').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -128,6 +129,7 @@ $('#btn3').on("click", function () {
     btnInactive();
     $('#btn3').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -135,6 +137,7 @@ $('#btn4').on("click", function () {
     btnInactive();
     $('#btn4').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -142,6 +145,7 @@ $('#btn5').on("click", function () {
     btnInactive();
     $('#btn5').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -149,6 +153,7 @@ $('#btn6').on("click", function () {
     btnInactive();
     $('#btn6').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -156,6 +161,7 @@ $('#btn7').on("click", function () {
     btnInactive();
     $('#btn7').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -163,6 +169,7 @@ $('#btn8').on("click", function () {
     btnInactive();
     $('#btn8').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -170,6 +177,7 @@ $('#btn9').on("click", function () {
     btnInactive();
     $('#btn9').addClass('active');
     nomBtn = this.id;
+	idSelected = "";
     loadAction(nomBtn);
 });
 
@@ -222,6 +230,7 @@ $('#supprimerAction').on("click", function () {
         alert("Selectionnez une action à supprimer.");
     } else {
         store.delete(nomBtn + "." + idSelected);
+		idSelected = "";
         $("#listeAction option:selected").remove();
         alert("L'action supprimée.");
     }
@@ -233,6 +242,7 @@ $('#btnEffacer').on("click", function () {
     } else {
 		if (confirm('Voulez vous vraiment supprimer cette scène ?')) {
             store.delete(nomBtn);
+			nomBtn = "";
 			$('#listeAction').empty();
 			alert("Scène effacée !");
             } else {}        
